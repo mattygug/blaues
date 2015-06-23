@@ -2,20 +2,20 @@
 
 /**
  * @ngdoc overview
- * @name blauesApp
+ * @name BlauesApp
  * @description
- * # blauesApp
+ * # BlauesApp
  *
  * Main module of the application.
  */
 angular
-  .module('blauesApp', [
+  .module('blauesapp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -25,15 +25,15 @@ angular
       })
       .when('/about', {
         templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+        controller: 'MainCtrl'
       })
       .when('/sources', {
         templateUrl: 'views/sources.html',
-        controller: 'SourcesCtrl'
+        controller: 'MainCtrl'
       })
       .when('/contact', {
         templateUrl: 'views/contact.html',
-        controller: 'ContactCtrl'
+        controller: 'MainCtrl'
       })
       .otherwise({
         redirectTo: '/'

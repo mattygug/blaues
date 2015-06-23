@@ -1,17 +1,10 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name blauesApp.controller:MainCtrl
- * @description
- * # MainCtrl
- * Controller of the blauesApp
- */
-angular.module('blauesApp')
+angular.module('blauesapp')
   .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    $scope.topics = ['Item 1', 'Item 2', 'Item 3'];
+    $scope.addTopic = function () {
+  	$scope.topics.push($scope.topic);
+  	$scope.topic = '';
+	};
   });

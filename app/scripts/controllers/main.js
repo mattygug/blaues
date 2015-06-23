@@ -7,4 +7,7 @@ angular.module('blauesapp')
   	$scope.topics.push($scope.topic);
   	$scope.topic = '';
 	};
+	$scope.removeTopic = function (index) {
+      $scope.topics.splice(index, 1);
+    };
   });
